@@ -1,0 +1,37 @@
+﻿@using Test_Task_CRM_lite.Models
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Домашняя страница</h1>
+</div>
+<table class ="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Имя заказчика </th>
+            <th>Имя исполнителя </th>
+            <th>Название задачи </th>
+            <th>Описание </th>
+            <th>Статус </th>
+            <th>Дата выполнения </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var item in Model)
+        {
+            <tr>
+                <td>@item.id</td>
+                <td>@item.customer_name</td>
+                <td>@item.implementer_name</td>
+                <td>@item.name</td>
+                <td>@item.description</td>
+                <td>@item.status</td>
+                <td>@item.deadline</td>
+                <td><button class="btn btn-primary">Изменить</button></td>
+                <td><button class="btn btn-danger">Комментарии</button></td>
+            </tr>
+        }
+    </tbody>
+</table>

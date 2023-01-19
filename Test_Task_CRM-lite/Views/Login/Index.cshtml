@@ -1,0 +1,34 @@
+﻿@using Test_Task_CRM_lite.Models
+@{
+    Layout = "";
+}
+<head>
+
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  </head>
+<body id="LoginForm">
+<div class="container">
+<div class="login-form">
+<div class="main-div">
+    <div class="panel">
+   <h2>Аутентификация</h2>
+   <p>Введите логин и пароль</p>
+   </div>
+        <div class="form-login">
+            <input type="email" class="form-control" id="inputEmail" placeholder="Логин">
+        </div>
+        <div class="form-password">
+            <input type="password" class="form-control" id="inputPassword" placeholder="Пароль">
+        </div>
+         <a a class="nav-link text-dark" asp-area="" asp-controller="Login" asp-action="Registration">Зарегистрировать нового пользователя?</a>
+        <form method="post" asp-action="login" asp-route-login="Customer_" asp-route-password="password"><button type="submit" class="btn btn-primary">Войти</button></form>
+    </div>
+</div>
+</div>
+</div>
+</body>
+
+
