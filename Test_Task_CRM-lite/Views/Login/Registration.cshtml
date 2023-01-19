@@ -1,0 +1,48 @@
+﻿@using Test_Task_CRM_lite.Models
+@model Test_Task_CRM_lite.Models.Profile
+@{
+  ViewBag.Title = "Список ролей";
+	Layout = "";
+}
+
+
+<head>
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+    <body id="LoginForm">
+      <div class="container">
+        <div class="login-form">
+          <div class="main-div">
+            <div class="panel">
+              <h2>Регистрация</h2>
+              <p>Заполните все поля</p>
+            </div>
+            <form id="Login">
+
+              <div class="form-group">
+
+
+                <input type="login" class="form-control" id="inputLogin" placeholder="Логин">
+
+              </div>
+
+              <div class="form-group">
+
+                <input type="password" class="form-control" id="inputPassword" placeholder="Пароль">
+
+              </div>              
+                <div class="form-group">
+
+                Тип пользователя:
+                @Html.DropDownListFor(model => model.id_role, ViewBag.listRole as SelectList)
+
+                </div>
+              <a a class="nav-link text-dark" asp-area="" asp-controller="Login" asp-action="Index">Вернуться в меню аутентификации</a>
+              <button type="submit" class="btn btn-primary">Зарегистрировать</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </body>
